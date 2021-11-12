@@ -1,0 +1,20 @@
+Sub Example1()
+Dim objFSO As Object
+Dim objFolder As Object
+Dim objFile As Object
+Dim i As Integer
+
+'Create an instance of the FileSystemObject
+Set objFSO = CreateObject("Scripting.FileSystemObject")
+'Get the folder object
+Set objFolder = objFSO.GetFolder("C:\Users\Accounting - 5\Desktop\Checks")
+i = 1
+'loops through each file in the directory and prints their names and path
+For Each objFile In objFolder.Files
+'print file name
+Cells(i + 1, 1) = objFile.Name
+'print file path
+Cells(i + 1, 2) = objFile.Path
+i = i + 1
+Next objFile
+End Sub
