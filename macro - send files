@@ -26,7 +26,7 @@ Sub Send_Files()
 
             With OutMail
                 .to = cell.Value
-                .Subject = "Paystub - Z Transportation"
+                .Subject = "Paystub - Company"
                 .Body = "Hello " & cell.Offset(0, -1).Value & " please find your paystub attached and if there are any issues give us a call in Accounting."
 
                 For Each FileCell In rng.SpecialCells(xlCellTypeConstants)
